@@ -1,6 +1,6 @@
-const int pirPin = 2;     // PIR sensor output pin
-const int buzzerPin = 3;  // Buzzer pin
-const int ledPin = 4;     // LED pin
+const int pirPin = 2;
+const int buzzerPin = 3; 
+const int ledPin = 4;
 
 void setup() {
     pinMode(pirPin, INPUT);
@@ -9,14 +9,14 @@ void setup() {
 }
 
 void loop() {
-    int motion = digitalRead(pirPin); // Read PIR sensor
+    int motion = digitalRead(pirPin); 
 
     if (motion == HIGH) {  // If motion detected
-        digitalWrite(buzzerPin, HIGH); // Turn buzzer on
-        digitalWrite(ledPin, HIGH);    // Turn LED on
-        delay(5000);                   // Keep alarm on for a second
+        digitalWrite(buzzerPin, HIGH); 
+        digitalWrite(ledPin, HIGH);
+        delay(5000);
     } else {
-        digitalWrite(buzzerPin, LOW);  // Turn buzzer off
-        digitalWrite(ledPin, LOW);     // Turn LED off
+        digitalWrite(buzzerPin, LOW);
+        digitalWrite(ledPin, LOW);
     }
 }
